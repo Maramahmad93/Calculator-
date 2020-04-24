@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+		body{
+			margin:150px;
+			padding-left: 450px;
+		}
+		div{
+			border:1px solid #000;
+			background-color: #33ccff;
+			width:300px;
+			height: 100px;
+			margin-bottom: 20px;
+			text-align: center;
+			padding-top:20px;
+		}
+		input{
+			background-color: #33ccff;
+		}
+
+		#add ,
+		#sub ,
+		#multiply , 
+		#divide{
+			text-align: center;
+			font-size: 20px;
+			display: inline-block;
+			width: 70px;
+			padding-top: 30px;
+			height:50px; 
+		}
+	</style>
+</head>
+<body>
+	
+
+	<div> 
+		<h6>Please Enter the first number </h6>
+		<input type="text" id="input_1"  placeholder="num1" >
+	</div>
+	<div >
+		<h6>please enter the second number</h6>
+		<input type="text"  id="input_2"  placeholder="num2" >
+	</div>
+	
+	<div id="add" onclick="add()" >+</div> <!-- can create it als oas a button  -->
+	<div id="sub" onclick="sub()">-</div>
+	<div id="multiply" onclick="multiply()">*</div>
+	<div id="divide" onclick="divide()">/</div>  
+	<div id="result" ></div>   <!-- can create it as a button and write disabled = "true" -->
+
+
+	<script type="text/javascript">
+		
+		var input_var1 = document.getElementById("input_1");
+		var input_var2 = document.getElementById("input_2");
+
+		function add(){
+			var result1 = Number(input_var1.value )+ Number(input_var2.value);
+			document.getElementById("result").innerHTML = result1  ; 
+			
+		}
+
+		function sub(){
+			var result1 = Number(input_var1.value )- Number(input_var2.value); //parseInt 
+			document.getElementById("result").innerHTML = result1  ; 
+		}
+
+		function multiply(){
+			var result1 = Number(input_var1.value )* Number(input_var2.value); 
+			document.getElementById("result").innerHTML = result1  ;  
+		}
+
+		function divide(){
+			var result1 = Number(input_var1.value )/ Number(input_var2.value); 
+			document.getElementById("result").innerHTML = result1  ; 
+		}
+
+
+	</script>
+
+</body>
+</html>
